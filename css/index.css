@@ -75,6 +75,10 @@ a{
     text-decoration: none;
 }
 
+.active{
+    color:red;
+}
+
 main{
     margin: auto;
     width: 800px;

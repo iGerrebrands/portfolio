@@ -1,14 +1,14 @@
 (function(){
     "use strict";
-    //Holds the active element its used for the minimizer so it does not hide the active element
-    var active = null;
-
     //Lists of elements needed for this peace of code
     //navbar is used to get all the <a></a> elements in the nav
     var navbar = document.querySelectorAll("nav a");
 
     //articles is used to get all the <article></article> elements
     var articles = document.querySelectorAll("article");
+
+    //Holds the active element its used for the minimizer so it does not hide the active element
+    var activeArticle = articles[0] !== 'undefined' ? articles[0] : null;
 
     //Minimizer object to hold default values for the minimizer
     var minimizer = {
@@ -21,12 +21,13 @@
     var minimize = function() {
         if(!minimizer.minimized) return;
         _.each(articles, function(article) {
-            if(article !== active) {
+            if(article !== activeArticle) {
                 article.style.display = "none";
             } else {
                 article.style.display = "block";
             }
         });
+
         //for(var i=0; i < articles.length; i++){
         //    if(i!==active) {
         //        articles[i].style.display = "none";
@@ -46,13 +47,26 @@
         //}
     };
 
+    //Sets the given element to class active and removes the class active from the old element with an active class
+    var setActiveNav = function(elem) {
+        _.each(navbar, function(a) {
+            if(a.className === "active"){
+                a.className = "";
+            }
+            if(a === elem){
+                a.className = "active";
+            }
+        });
+    };
+
     //Sets a onclick event listener to all the navigation items
     _.each(navbar, function(a) {
         a.onclick = function(e) {
             var href = e.path[1].attributes[0].nodeValue.replace('#', '');
             _.every(articles, function(article) {
                if(article.getAttribute("id") === href){
-                   active = article;
+                   setActiveNav(a);
+                   activeArticle = article;
                    minimize();
                }
                 return article.getAttribute("id") !== href;
