@@ -135,11 +135,14 @@ section:not(:last-of-type){
     padding: 10px;
 }
 
+.project header h3 sup{
+    color: #253BE3;
+    font-size: 50%;
+}
+
 .project img{
     margin: 20px;
     width: 100%;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
 }
 
 address span{
