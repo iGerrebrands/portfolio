@@ -1,0 +1,195 @@
+*{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    text-align: center;
+}
+
+h1{
+    font-size: 50px;
+    padding: 5px;
+}
+
+h2{
+    font-size: 40px;
+    color: #C7041B;
+}
+
+h3{
+    font-size: 25px;
+    color: black;
+}
+
+p{
+    padding: 10px;
+    font-size: 18px;
+}
+
+p::first-letter {
+    color: #C7041B;
+    font-size: 130%;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.page-header{
+    background-color: white;
+    width: 100%;
+    top: 0;
+}
+
+.page-header h1{
+    top:0;
+    font-style: oblique;
+}
+
+.sup-header{
+    color: #C7041B;
+    padding-bottom: 20px;
+}
+
+nav{
+    color: black;
+    font-size: 20px;
+    width: 800px;
+    margin: auto;
+    border-bottom: 2px dashed black;
+}
+
+ul li{
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+ul li:hover{
+    color: red;
+}
+
+a{
+    color: purple;
+    text-decoration: none;
+}
+
+main{
+    margin: auto;
+    width: 800px;
+}
+
+article{
+    padding: 20px;
+}
+
+article header{
+    display: block;
+    margin: 10px;
+}
+
+section header{
+    margin: 10px;
+}
+
+article:not(:last-of-type){
+    border-bottom: 2px dashed lightgray;
+}
+
+table{
+    width: 800px;
+    margin: auto;
+    padding: 10px;
+}
+
+table td{
+    padding: 2px 0px;
+}
+
+table thead{
+    font-weight: bold;
+}
+
+.positive-green{
+    color: #00CC4E;
+}
+
+.moderate-yellow{
+    color: #ECEC3A;
+}
+
+.basic-blue{
+    color: #253BE3;
+}
+
+.project:not(:last-of-type){
+    border-bottom: 1px dashed lightgray;
+}
+
+section:not(:last-of-type){
+    border-bottom: 2px dashed lightgray;
+}
+
+.project header{
+    padding: 10px;
+}
+
+.project img{
+    margin: 20px;
+    width: 100%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+address span{
+    display: block;
+}
+
+footer{
+    color: black;
+    width: 800px;
+    margin: auto;
+    border-top: 2px dashed black;
+}
+
+@media only screen and (max-width: 768px){
+    nav{
+        width: 600px;
+    }
+
+    main{
+        width: 600px;
+    }
+
+    table{
+        width: 500px;
+    }
+
+    footer{
+        width: 600px;
+    }
+
+}
+
+@media only screen and (max-width: 640px){
+    nav{
+        width: 95%;
+    }
+
+    nav ul li{
+        display: block;
+    }
+
+    main{
+        width: 90%;
+    }
+
+    table{
+        width: 300px;
+    }
+
+    footer{
+        width: 95%;
+    }
+}
