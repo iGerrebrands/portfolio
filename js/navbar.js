@@ -1,15 +1,23 @@
 (function(){
     "use strict";
+    //Holds the active element its used for the minimizer so it does not hide the active element
     var active = null;
+
+    //Lists of elements needed for this peace of code
+    //navbar is used to get all the <a></a> elements in the nav
     var navbar = document.querySelectorAll("nav a");
+
+    //articles is used to get all the <article></article> elements
     var articles = document.querySelectorAll("article");
 
+    //Minimizer object to hold default values for the minimizer
     var minimizer = {
         text: "-",
         desc: "Minimize",
         minimized: false
     };
 
+    //Hiding every article if not active
     var minimize = function() {
         if(!minimizer.minimized) return;
         _.each(articles, function(article) {
@@ -28,6 +36,7 @@
         //}
     };
 
+    //Puts every article back to display block
     var maximize = function() {
         _.each(articles, function(article) {
              article.style.display = "block";
@@ -37,6 +46,7 @@
         //}
     };
 
+    //Sets a onclick event listener to all the navigation items
     _.each(navbar, function(a) {
         a.onclick = function(e) {
             var href = e.path[1].attributes[0].nodeValue.replace('#', '');
