@@ -6,9 +6,9 @@ myPortfolioApp.controller('myProjectCtrl', function($scope) {
                 "We had the job to create the website and the CMS (Content Management System). They are using this website for publicity."},
 
         {name:"Example project1", date:["Nov 2015","Dec 2015"], img:"image/project-placeholder.jpg",
-            href:"http://www.techniekinnovatiehuis.nl", desc:"Some bullshit"},
+            href:"http://www.techniekinnovatiehuis.nl", desc:"A description."},
 
         {name:"Example project2", date:["Nov 2015", "Dec 2015"], img:"image/project-placeholder2.jpg",
-            href:"http://www.google.nl", desc:"Some bullshit"}
+            href:"http://www.google.nl", desc:"A description."}
     ];
 });
