@@ -1,5 +1,6 @@
-myPortfolioApp.directive('project', function() {
-    return{
-        templateUrl: "./tmpl/project.html"
-    };
-});
+myPortfolioApp
+    .directive('project', function() {
+        return{
+            templateUrl: "./tmpl/project.html"
+        };
+    });
