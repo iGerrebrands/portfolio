@@ -9,6 +9,6 @@ myPortfolioApp.controller('myProjectCtrl', function($scope) {
             href:"http://www.techniekinnovatiehuis.nl", desc:"A description."},
 
         {name:"Example project2", date:["Nov 2015", "Dec 2015"], img:"image/project-placeholder2.jpg",
-            href:"http://www.google.nl", desc:"A description.."}
+            href:"http://www.google.nl", desc:"A description."}
     ];
 });
