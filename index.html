@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>Portofolio : Ian Gerrebrands</title>
     <link rel="stylesheet" type="text/css" href="css/index.css">
-    <script src="js/libs/underscore-min.js" type="text/javascript"></script>
-    <script src="js/libs/angular.min.js" type="text/javascript"></script>
+    <script src="js/lib/underscore-min.js" type="text/javascript"></script>
+    <script src="js/lib/angular.min.js" type="text/javascript"></script>
 </head>
 <body ng-app="myPortfolioApp">
     <header class="page-header">
@@ -13,11 +13,10 @@
         <h2 class="sup-header">Developer</h2>
         <nav ng-controller="myNavCtrl">
             <ul>
-                <a href="#about" class="active"><li>About</li></a>
-                <a href="#skills"><li>Skills</li></a>
-                <a href="#projects"><li>Projects</li></a>
-                <a href="#contact"><li>Contact</li></a>
-                <a href="#"><li>-</li></a>
+                <a ng-repeat="l in nav.links" href="{{l.href}}" ng-class="{active: l.active}" ng-click="activate(l)">
+                    <li>{{l.name}}</li>
+                </a>
+                <a href="" ng-mouseenter="toggleMinimizerState()" ng-mouseleave="toggleMinimizerState()" ng-click="toggleMinimizerArticles()"><li>{{nav.minimizer.state}}</li></a>
             </ul>
         </nav>
     </header>
@@ -51,22 +50,17 @@
         </article>
 
         <!-- Skills -->
-        <article id="skills">
+        <article id="skills" ng-controller="mySkillCtrl">
             <header><h2>Technical skills</h2></header>
             <table>
                 <thead>
                     <td><h3>Language</h3></td>
                     <td><h3>Experience</h3></td>
                 </thead>
-                <tr><td>HTML5</td><td><span class="positive-green">GOOD</span></td></tr>
-                <tr><td>CSS3</td><td><span class="moderate-yellow">MODERATE</span></td></tr>
-                <tr><td>Javascript</td><td><span class="positive-green">GOOD</span></td></tr>
-                <tr><td>NodeJS</td><td><span class="positive-green">GOOD</span></td></tr>
-                <tr><td>Coffeescript</td><td><span class="positive-green">GOOD</span></td></tr>
-                <tr><td>PHP</td><td><span class="moderate-yellow">MODERATE</span></td></tr>
-                <tr><td>Java</td><td><span class="positive-green">GOOD</span></td></tr>
-                <tr><td>C# / Unity</td><td><span class="moderate-yellow">MODERATE</span></td></tr>
-                <tr><td>Python</td><td><span class="basic-blue">BASIC</span></td></tr>
+                <tr ng-repeat="s in skills">
+                    <td>{{s.skill}}</td>
+                    <td><span ng-class="s.exp.style">{{s.exp.text}}</span></td>
+                </tr>
             </table>
         </article>
 
@@ -105,9 +99,8 @@
     <!-- Javascript -->
     <script src="js/myApp.js" type="text/javascript"></script>
     <script src="js/ctrl/myNavController.js" type="text/javascript"></script>
+    <script src="js/ctrl/mySkillController.js" type="text/javascript"></script>
     <script src="js/ctrl/myProjectController.js" type="text/javascript"></script>
-    <script src="js/directives/projectDirective.js" type="text/javascript"></script>
-    <script src="js/navbar.js" type="text/javascript"></script>
-    <script src="js/index.js" type="text/javascript"></script>
+    <script src="js/directive/projectDirective.js" type="text/javascript"></script>
 </body>
 </html>
