@@ -31,7 +31,11 @@ portfolioApp
                 if(element === link){
                     link.active = true;
                 }
-            })
+            });
+
+            if($scope.nav.minimizer.minimized){
+                minimize();
+            }
         };
 
         //When clicked on minimizer
