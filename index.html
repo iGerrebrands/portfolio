@@ -7,11 +7,11 @@
     <script src="js/lib/underscore-min.js" type="text/javascript"></script>
     <script src="js/lib/angular.min.js" type="text/javascript"></script>
 </head>
-<body ng-app="myPortfolioApp">
+<body ng-app="portfolioApp">
     <header class="page-header">
         <h1>Ian Gerrebrands</h1>
         <h2 class="sup-header">Developer</h2>
-        <nav ng-controller="myNavCtrl">
+        <nav ng-controller="navCtrl">
             <ul>
                 <a ng-repeat="l in nav.links" href="{{l.href}}" ng-class="{active: l.active}" ng-click="activate(l)">
                     <li>{{l.name}}</li>
@@ -50,24 +50,24 @@
         </article>
 
         <!-- Skills -->
-        <article id="skills" ng-controller="mySkillCtrl">
+        <article id="skills" ng-controller="skillCtrl">
             <header><h2>Technical skills</h2></header>
             <table>
                 <thead>
                     <td><h3>Language</h3></td>
                     <td><h3>Experience</h3></td>
                 </thead>
-                <tr ng-repeat="s in skills">
-                    <td>{{s.skill}}</td>
-                    <td><span ng-class="s.exp.style">{{s.exp.text}}</span></td>
+                <tr ng-repeat="skill in skills">
+                    <td>{{skill.NAME}}</td>
+                    <td><span ng-class="skill.EXPERIENCE.STYLE">{{skill.EXPERIENCE.TEXT}}</span></td>
                 </tr>
             </table>
         </article>
 
         <!-- Projects -->
-        <article id="projects" ng-controller="myProjectCtrl">
+        <article id="projects" ng-controller="projectCtrl">
             <header><h2>Projects</h2></header>
-            <project ng-repeat="p in projects"></project>
+            <project ng-repeat="project in projects"></project>
         </article>
 
         <!-- Contact -->
@@ -97,10 +97,12 @@
     </footer>
 
     <!-- Javascript -->
-    <script src="js/myApp.js" type="text/javascript"></script>
-    <script src="js/ctrl/myNavController.js" type="text/javascript"></script>
-    <script src="js/ctrl/mySkillController.js" type="text/javascript"></script>
-    <script src="js/ctrl/myProjectController.js" type="text/javascript"></script>
-    <script src="js/directive/projectDirective.js" type="text/javascript"></script>
+    <script src="js/app.js" type="text/javascript"></script>
+    <script src="js/constant/skills.js" type="text/javascript"></script>
+    <script src="js/constant/projects.js" type="text/javascript"></script>
+    <script src="js/nav/myNavController.js" type="text/javascript"></script>
+    <script src="js/skill/mySkillController.js" type="text/javascript"></script>
+    <script src="js/project/myProjectController.js" type="text/javascript"></script>
+    <script src="js/project/projectDirective.js" type="text/javascript"></script>
 </body>
 </html>

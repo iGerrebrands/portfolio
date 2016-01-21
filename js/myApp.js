@@ -1,1 +1,0 @@
-var myPortfolioApp = angular.module('myPortfolioApp', []);
