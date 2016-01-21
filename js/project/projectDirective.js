@@ -1,6 +1,8 @@
-portfolioApp
-    .directive('project', function() {
-    return{
-        templateUrl: "./js/project/project.html"
-    };
-});
+(function() {
+    portfolioApp
+        .directive('project', function() {
+            return{
+                templateUrl: "./js/project/project.html"
+            };
+        });
+})();

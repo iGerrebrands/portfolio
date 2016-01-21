@@ -1,7 +1,9 @@
-portfolioApp
-    .controller('projectCtrl', function(
-        $scope,
-        PROJECTS
-    ) {
-        $scope.projects = PROJECTS;
-});
+(function() {
+    portfolioApp
+        .controller('projectCtrl', function(
+            $scope,
+            PROJECTS
+        ) {
+            $scope.projects = PROJECTS;
+        });
+})();

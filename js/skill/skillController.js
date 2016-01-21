@@ -1,7 +1,9 @@
-portfolioApp
-    .controller('skillCtrl', function(
-        $scope,
-        SKILLS
-    ) {
-        $scope.skills = SKILLS;
-});
+(function() {
+    portfolioApp
+        .controller('skillCtrl', function(
+            $scope,
+            SKILLS
+        ) {
+            $scope.skills = SKILLS;
+        });
+})();
