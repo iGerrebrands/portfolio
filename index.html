@@ -13,8 +13,8 @@
         <h2 class="sup-header">Developer</h2>
         <nav ng-controller="navCtrl">
             <ul>
-                <a ng-repeat="l in nav.links" href="{{l.href}}" ng-class="{active: l.active}" ng-click="activate(l)">
-                    <li>{{l.name}}</li>
+                <a ng-repeat="link in nav.links" href="{{link.href}}" ng-class="{active: link.active}" ng-click="activate(link)">
+                    <li>{{link.name}}</li>
                 </a>
                 <a href="" ng-mouseenter="toggleMinimizerState()" ng-mouseleave="toggleMinimizerState()" ng-click="toggleMinimizerArticles()"><li>{{nav.minimizer.state}}</li></a>
             </ul>
