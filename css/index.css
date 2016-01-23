@@ -6,6 +6,9 @@
 
 body{
     text-align: center;
+    background-image: url("../image/background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 h1{
@@ -97,7 +100,8 @@ main{
 
 .anchor{
     visibility: hidden;
-    margin-bottom: 60px;
+    padding-top:60px;
+    margin-top:-60px;
 }
 
 article{
@@ -114,7 +118,7 @@ section header{
 }
 
 article:not(:last-of-type){
-    border-bottom: 2px dashed lightgray;
+    border-bottom: 1px dashed black;
 }
 
 table{
