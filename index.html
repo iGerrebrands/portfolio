@@ -14,9 +14,11 @@
         <h2 class="sup-header">Developer</h2>
         <nav ng-controller="navCtrl" scroll ng-class="{min:boolChangeClass}">
             <ul>
-                <a ng-repeat="link in nav.links" href="{{link.href}}" ng-class="{active: link.active}" ng-click="activate(link)">
-                    <li>{{link.name}}</li>
-                </a>
+                <li ng-repeat="link in nav.links">
+                    <a  href="{{link.href}}" ng-class="{active: link.active}" ng-click="activate(link)">
+                        {{link.name}}
+                    </a>
+                </li>
             </ul>
             <span>&#9660;</span>
         </nav>

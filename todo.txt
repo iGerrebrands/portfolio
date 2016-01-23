@@ -1,3 +1,2 @@
 TODO
 
-1. <a></a> tags inside of the <li></li> tags
