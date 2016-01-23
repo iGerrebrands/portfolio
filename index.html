@@ -8,22 +8,23 @@
     <script src="js/lib/angular.min.js" type="text/javascript"></script>
 </head>
 <body ng-app="portfolioApp">
+    <div id="about"></div>
     <header class="page-header">
         <h1>Ian Gerrebrands</h1>
         <h2 class="sup-header">Developer</h2>
-        <nav ng-controller="navCtrl">
+        <nav ng-controller="navCtrl" scroll ng-class="{min:boolChangeClass}">
             <ul>
                 <a ng-repeat="link in nav.links" href="{{link.href}}" ng-class="{active: link.active}" ng-click="activate(link)">
                     <li>{{link.name}}</li>
                 </a>
-                <a href="" ng-mouseenter="toggleMinimizerState()" ng-mouseleave="toggleMinimizerState()" ng-click="toggleMinimizerArticles()"><li>{{nav.minimizer.state}}</li></a>
             </ul>
+            <span>&#9660;</span>
         </nav>
     </header>
 
     <main>
         <!-- About -->
-        <article id="about">
+        <article>
             <header><h2>About</h2></header>
             <table>
                 <tr><td>FULL NAME</td><td>Ian Gerrebrands</td></tr>
@@ -50,7 +51,8 @@
         </article>
 
         <!-- Skills -->
-        <article id="skills" ng-controller="skillCtrl">
+        <div id="skills" class="anchor"></div>
+        <article ng-controller="skillCtrl">
             <header><h2>Technical skills</h2></header>
             <table>
                 <thead>
@@ -65,13 +67,15 @@
         </article>
 
         <!-- Projects -->
-        <article id="projects" ng-controller="projectCtrl">
+        <div id="projects" class="anchor"></div>
+        <article ng-controller="projectCtrl">
             <header><h2>Projects</h2></header>
             <project ng-repeat="project in projects"></project>
         </article>
 
         <!-- Contact -->
-        <article id="contact">
+        <div id="contact" class="anchor"></div>
+        <article>
             <header><h2>Contact</h2></header>
             <section>
                 <address>
@@ -101,6 +105,7 @@
     <script src="js/constant/navigation.js" type="text/javascript"></script>
     <script src="js/constant/skills.js" type="text/javascript"></script>
     <script src="js/constant/projects.js" type="text/javascript"></script>
+    <script src="js/nav/navScrollDirective.js" type="text/javascript"></script>
     <script src="js/nav/navService.js" type="text/javascript"></script>
     <script src="js/nav/navController.js" type="text/javascript"></script>
     <script src="js/skill/skillController.js" type="text/javascript"></script>
