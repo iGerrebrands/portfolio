@@ -69,9 +69,11 @@ nav{
     width: 100%;
     position: fixed;
     top: 0;
+    border-bottom: 1px solid black;
 }
 
 ul li{
+    font-size: 23px;
     display: inline-block;
     padding: 10px 20px;
 }
@@ -81,16 +83,16 @@ nav span{
 }
 
 ul li:hover{
-    color: red;
+    color: #C7041B;
 }
 
 a{
-    color: purple;
+    color: black;
     text-decoration: none;
 }
 
 .active{
-    color:red;
+    color: #C7041B;
 }
 
 main{
