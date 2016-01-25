@@ -8,7 +8,7 @@
                 "We had the job to create the website and the CMS (Content Management System). They are using this website for publicity."},
 
                 {name:"Android schedule app", date:["Jan 2015","Mar 2015"], img:"image/project-rooster-app.jpg",
-                    href:"", desc:"A classmate and I developed a schedule app for android, it was our school project. " +
+                    href:"http://www.mondriaanict.nl/", desc:"A classmate and I developed a schedule app for android, it was our school project. " +
                 "I made half of the front-end my classmate made the half of the front-end and all of the back-end. " +
                 "In the app you get a overview of your schedule and you can see an overview of all the hours you are absent or present."}
             ]
